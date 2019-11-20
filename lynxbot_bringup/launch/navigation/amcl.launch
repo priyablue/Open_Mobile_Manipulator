@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- Scan topic -->
+  <arg name="scan_topic" default="scan" />
+  <!-- Map server -->
+  <arg name="map_file" default="$(find lynxbot_bringup)/map/mymap.yaml"/>
+  <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" />
+
+  <!-- Place map frame at odometry frame -->
+  <!--node pkg="tf" type="static_transform_publisher" name="map_odom_broadcaster"
+      args="0 0 0 0 0 0 map odom 100"/-->
+
+  <!-- Localization-->
+  <node pkg="amcl" type="amcl" name="amcl">
+    <rosparam file="$(find lynxbot_bringup)/config/navigation/my_amcl_params.yaml" command="load" />
+    <remap from="scan" to="$(arg scan_topic)"/>
+  </node>
+
+
+</launch>
