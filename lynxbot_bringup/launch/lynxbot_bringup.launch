@@ -14,6 +14,9 @@
   <node name="Pub_to_Arduino" pkg="lynxbot_bringup" type="Pub_to_Arduino" respawn="false" 
   output="screen"/>
 
+
+
+
   <!--node name="ydlidar_node"  pkg="ydlidar"  type="ydlidar_node" output="screen" respawn="false" >
     <rosparam file="$(find lynxbot_bringup)/config/ydlidar_params.yaml" command="load" />
   </node-->

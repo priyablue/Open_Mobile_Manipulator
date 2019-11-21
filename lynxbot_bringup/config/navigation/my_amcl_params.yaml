@@ -2,7 +2,7 @@ use_map_topic: true
 odom_model_type: diff-corrected
 odom_frame_id: odom
 global_frame_id: map
-base_frame_id: base_link
+base_frame_id: robot_footprint
 tf_broadcast: true
 
 min_particles: 300
