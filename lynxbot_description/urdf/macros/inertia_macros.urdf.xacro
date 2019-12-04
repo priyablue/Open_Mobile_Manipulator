@@ -14,7 +14,7 @@
 
   <xacro:macro name="box_inertial" params="x y z m *origin">
     <inertial>
-      <mass value="${mass}" />
+      <mass value="${m}" />
       <xacro:insert_block name="origin" />
       <inertia  ixx="${m*(y*y+z*z)/12}" ixy = "0" ixz = "0"
                   iyy="${m*(x*x+z*z)/12}" iyz = "0"

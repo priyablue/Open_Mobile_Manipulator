@@ -11,6 +11,7 @@
   <xacro:include filename="$(find lynxbot_description)/urdf/sensor_bases.urdf.xacro" />
   <xacro:include filename="$(find lynxbot_description)/urdf/transmissions.urdf.xacro" />
   <xacro:include filename="$(find lynxbot_description)/urdf/sensors/kinect.urdf.xacro" />
+  <xacro:include filename="$(find lynxbot_description)/urdf/macros/inertia_macros.urdf.xacro" />
   <!--xacro:include filename="$(find lynxbot_description)/urdf/macros/inertia_macros.urdf.xacro" /-->
   <xacro:arg name="sim" default="false"/>
   <xacro:if value="$(arg sim)">
@@ -30,17 +31,11 @@
   </joint>
 
   <link name='chassis'>
-    <pose>0 0 0 0 0 0</pose>
 
-    <inertial>
-      <mass value="5.0"/>
-      <origin xyz="0.0 0 0" rpy=" 0 0 0"/>
-      <inertia
-          ixx="0.1" ixy="0" ixz="0"
-          iyy="0.1" iyz="0"
-          izz="0.1"
-      />
-    </inertial>
+
+      <xacro:box_inertial x="${Length_base}" y="${Width_base}" z="${Height_base}" m="500">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+      </xacro:box_inertial>
 
     <collision name='collision'>
       <origin xyz="0 0 0" rpy=" 0 0 0"/> 

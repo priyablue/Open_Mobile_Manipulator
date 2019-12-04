@@ -31,7 +31,7 @@
               origin_rpy="0 0 0"
               color_name = "blue"
               color = "0 0 1 1"
-              mass = "0.5"/>
+              mass = "${m_arm_base}"/>
 
 
 
@@ -42,7 +42,7 @@
               origin_rpy="0 0 0"
               color_name = "green"
               color = "0 1 0 1"
-              mass = "0.1"/>
+              mass = "${m_0}"/>
 
 
   <arm_joint joint_name="joint_0" parent="arm_base" child = "link_0"
@@ -61,7 +61,7 @@
               origin_rpy="0 0 0"
               color_name = "red"
               color = "1 0 0 1"
-              mass = "0.2"/>
+              mass = "${m_1}"/>
 
 
   <arm_joint joint_name="joint_1" parent="link_0" child = "link_1"
@@ -79,7 +79,7 @@
               origin_rpy="0 0 0"
               color_name = "green"
               color = "0 0 1 1"
-              mass = "0.2"/>
+              mass = "${m_2}"/>
 
 
   <arm_joint joint_name="joint_2" parent="link_1" child = "link_2"
@@ -97,7 +97,7 @@
               origin_rpy="0 0 0"
               color_name = "red"
               color = "1 0 1 1"
-              mass = "0.2"/>
+              mass = "${m_3}"/>
 
 
   <arm_joint joint_name="joint_3" parent="link_2" child = "link_3"
@@ -114,7 +114,7 @@
               origin_rpy="0 0 0"
               color_name = "blue"
               color = "0 0 1 1"
-              mass = "0.2"/>
+              mass = "${m_4}"/>
 
 
   <arm_joint joint_name="joint_4" parent="link_3" child = "link_4"
@@ -132,7 +132,7 @@
               origin_rpy="0 0 0"
               color_name = "green"
               color = "0 1 0 1"
-              mass = "0.2"/>
+              mass = "${m_5}"/>
 
 
   <arm_joint joint_name="joint_5" parent="link_4" child = "link_5"
@@ -151,7 +151,7 @@
               origin_rpy="1.57 0 0"
               color_name = "green"
               color = "0 1 0 1"
-              mass = "0.2"/>
+              mass = "${m_ee}"/>
 
   <arm_joint joint_name="joint_ee_base" parent="${parent}" child = "ee_base"
                type = "fixed"
@@ -167,7 +167,7 @@
               origin_rpy="0 0 0"
               color_name = "green"
               color = "0 1 0 1"
-              mass = "0.2"/>
+              mass = "${m_f1}"/>
 
   <arm_joint joint_name="joint_finger1" parent="ee_base" child = "finger1"
                type = "prismatic"
@@ -184,7 +184,7 @@
               origin_rpy="0 0 0"
               color_name = "green"
               color = "0 1 0 1"
-              mass = "0.2"/>
+              mass = "${m_f2}"/>
 
   <arm_joint joint_name="joint_finger2" parent="ee_base" child = "finger2"
                type = "prismatic"
