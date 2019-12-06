@@ -34,7 +34,7 @@
   <xacro:property name="lidar_base_joint_z" value="0.0275" />
 
   <xacro:property name="ydlidar_tilt" value="${M_PI/2 + (-2.5)*(M_PI/180)}" />
-  <xacro:property name="ydlidar_joint_z" value="0.025" />
+  <xacro:property name="ydlidar_joint_z" value="0.055" />
 
   <!-- kinect base-->
   <xacro:property name="kinect_base1_height" value="0.38" />
@@ -60,13 +60,13 @@
   <xacro:property name="arm_parent" value="wood_base" />
   <xacro:property name="ee_parent" value="link_5" />
 
-  <xacro:property name="m_arm_base" value="0.4" />
-  <xacro:property name="m_0" value="0.3" />
-  <xacro:property name="m_1" value="0.4" />
-  <xacro:property name="m_2" value="0.8" />
-  <xacro:property name="m_3" value="0.1" />
-  <xacro:property name="m_4" value="0.1" />
-  <xacro:property name="m_5" value="0.1" />
+  <xacro:property name="m_arm_base" value="100" />
+  <xacro:property name="m_0" value="0.01" />
+  <xacro:property name="m_1" value="0.01" />
+  <xacro:property name="m_2" value="0.01" />
+  <xacro:property name="m_3" value="0.01" />
+  <xacro:property name="m_4" value="0.01" />
+  <xacro:property name="m_5" value="0.01" />
   <xacro:property name="m_ee" value="0.1" />
   <xacro:property name="m_f1" value="0.03" />
   <xacro:property name="m_f2" value="0.03" />

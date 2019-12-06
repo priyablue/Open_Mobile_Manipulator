@@ -18,8 +18,8 @@
     <arg name="info" value="true"/>
   </include>
 
-  <include file="$(find my_arm_moveit_config)/launch/moveit_rviz.launch">
+  <!--include file="$(find my_arm_moveit_config)/launch/moveit_rviz.launch">
     <arg name="config" value="true"/>
-  </include>
+  </include-->
 
 </launch>

@@ -33,9 +33,11 @@
   <link name='chassis'>
 
 
-      <xacro:box_inertial x="${Length_base}" y="${Width_base}" z="${Height_base}" m="500">
-        <origin xyz="0 0 0" rpy="0 0 0"/>
-      </xacro:box_inertial>
+   <inertial>
+     <origin xyz="0 0 0" rpy="0 0 0"/>
+     <mass value="100"/>
+     <inertia ixx="0.5"  ixy="0"  ixz="0" iyy="0.5" iyz="0" izz="0.5" />
+   </inertial>
 
     <collision name='collision'>
       <origin xyz="0 0 0" rpy=" 0 0 0"/> 

@@ -8,9 +8,11 @@
 
     <link name="${prefix}_wheel">
   
-      <xacro:cylinder_inertial radius="0.055" length="0.065" mass="5">
-        <origin xyz="${origin_xyz}" rpy="${origin_rpy}"/>
-      </xacro:cylinder_inertial>
+   <inertial>
+     <origin xyz="0 0 0" rpy="0 0 0"/>
+     <mass value="100"/>
+     <inertia ixx="0.15"  ixy="0"  ixz="0" iyy="0.15" iyz="0" izz="0.15" />
+   </inertial>
       <visual>
         <geometry>
           <cylinder length="0.065" radius="0.055"/>
@@ -22,7 +24,7 @@
       </visual>
       <collision>
         <geometry>
-          <cylinder length="0.03" radius="0.05"/>
+          <cylinder length="0.065" radius="0.055"/>
         </geometry>
         <origin xyz="${origin_xyz}" rpy="${origin_rpy}"/>
       </collision>

@@ -41,7 +41,7 @@
 
   </xacro:macro>
 
-  <xacro:macro name="lidar_base">
+  <!--xacro:macro name="lidar_base">
     <link name="lidar_base">
 
       <inertial>
@@ -68,15 +68,15 @@
         </geometry>
         <origin xyz="0 0 0.005" rpy="0 0 0"/>
       </collision>
-    </link>
+    </link-->
     <!-- -0.057 from center of the robot wood base 0.0575 forward so -11.45 from wood center-->
-    <joint name="lidar_base_joint" type="fixed">
+    <!--joint name="lidar_base_joint" type="fixed">
       <origin xyz="${lidar_base_joint_x} ${lidar_base_joint_y} ${lidar_base_joint_z}" rpy="0 0 0" />
       <parent link="chassis"/>
       <child link="lidar_base" />
     </joint>
 
-  </xacro:macro>
+  </xacro:macro-->
 
   <xacro:macro name="kinect_base1">
     <link name="kinect_base1">
@@ -85,9 +85,9 @@
         <mass value="0.01"/>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <inertia
-          ixx="0.000001" ixy="0" ixz="0"
-          iyy="0.000001" iyz="0"
-          izz="0.000001"
+          ixx="0.0001" ixy="0" ixz="0"
+          iyy="0.0001" iyz="0"
+          izz="0.0001"
         />
       </inertial>
       <visual>
@@ -122,9 +122,9 @@
         <mass value="0.01"/>
         <origin xyz="0 0 0" rpy="0 0 0"/>
         <inertia
-          ixx="0.000001" ixy="0" ixz="0"
-          iyy="0.00001" iyz="0"
-          izz="0.00001"
+          ixx="0.0001" ixy="0" ixz="0"
+          iyy="0.0001" iyz="0"
+          izz="0.0001"
         />
       </inertial>
       <visual>
