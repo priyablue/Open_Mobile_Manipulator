@@ -23,15 +23,8 @@
   <xacro:property name="wood_joint_y" value="0.0" />
   <xacro:property name="wood_joint_z" value="0.1275" />
 
-  <!-- lidar base-->
-
-  <xacro:property name="lidar_base_size_x" value="0.04" />
-  <xacro:property name="lidar_base_size_y" value="0.07" />
-  <xacro:property name="lidar_base_size_z" value="0.01" />
-
-  <xacro:property name="lidar_base_joint_x" value="0.015" />
-  <xacro:property name="lidar_base_joint_y" value="0.0" />
-  <xacro:property name="lidar_base_joint_z" value="0.0275" />
+  
+  <!-- lidar -->
 
   <xacro:property name="ydlidar_tilt" value="${M_PI/2 + (-2.5)*(M_PI/180)}" />
   <xacro:property name="ydlidar_joint_z" value="0.055" />
