@@ -17,15 +17,15 @@
 
 
 
-  <!--node name="ydlidar_node"  pkg="ydlidar"  type="ydlidar_node" output="screen" respawn="false" >
+  <node name="ydlidar_node"  pkg="ydlidar"  type="ydlidar_node" output="screen" respawn="false" >
     <rosparam file="$(find lynxbot_bringup)/config/ydlidar_params.yaml" command="load" />
-  </node-->
+  </node>
 
 
 
-  <!--node pkg="lynxbot_bringup" type="diff_tf4.py" name="diff_tf" output="screen">
+  <node pkg="lynxbot_bringup" type="diff_tf4.py" name="diff_tf" output="screen">
     <rosparam file="$(find lynxbot_bringup)/config/odom_encoder_params.yaml" command="load" />
-  </node-->
+  </node>
 
   <!--node pkg="rf2o_laser_odometry" type="rf2o_laser_odometry_node" name="rf2o_laser_odometry" output="screen">
     <rosparam file="$(find lynxbot_bringup)/config/rf2o_laser_odometry_params.yaml" command="load" />
