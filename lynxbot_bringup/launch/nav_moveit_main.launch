@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <launch>
   <!-- Scan topic -->
-  <arg name="scan_topic" default="scan" />
+  <arg name="scan_topic" default="/scan" />
   <!-- Map server -->
-  <arg name="map_file" default="$(find lynxbot_bringup)/map/sim_map.yaml"/>
+  <arg name="map_file" default="$(find lynxbot_bringup)/map/test_map.yaml"/>
   <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" />
 
   <!-- Place map frame at odometry frame -->
@@ -36,8 +36,8 @@
     <rosparam file="$(find lynxbot_bringup)/config/navigation/global_costmap_params.yaml" command="load" ns="global_costmap"/>
     
 
-    <remap from="cmd_vel" to="cmd_vel"/>
-    <remap from="odom" to="odom"/>
+    <remap from="cmd_vel" to="/cmd_vel"/>
+    <remap from="odom" to="/odom"/>
     <remap from="scan" to="/scan"/>
 
 
@@ -57,5 +57,5 @@
   </include>
 
 
-<node type="rviz" name="rviz" pkg="rviz" args="-d $(find lynxbot_bringup)/rviz/rviz_config.rviz" />
+<!--node type="rviz" name="rviz" pkg="rviz" args="-d $(find lynxbot_bringup)/rviz/rviz_config.rviz" /-->
 </launch>

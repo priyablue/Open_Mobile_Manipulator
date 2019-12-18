@@ -5,8 +5,8 @@ global_frame_id: map
 base_frame_id: robot_footprint
 tf_broadcast: true
 
-min_particles: 300
-max_particles: 1500
+min_particles: 100
+max_particles: 500
 kld_err: 0.04 #0.1
 kdl_z: 0.99 #0.99
 update_min_d: 0.0
@@ -26,10 +26,10 @@ laser_lambda_short: 0.1
 laser_model_type: likelihood_field
 
 
-odom_alpha1: 0.15  # expect noise of rotation estimate from rotation movement
-odom_alpha2: 0.1 # expect noise of rotation estimate from translation movement
-odom_alpha3: 0.1 # expect noise of translation estimate from translation movement
-odom_alpha4: 0.1 # expect noise of translation estimate from rotation movement
+odom_alpha1: 0.2  # expect noise of rotation estimate from rotation movement
+odom_alpha2: 0.12 # expect noise of rotation estimate from translation movement
+odom_alpha3: 0.12 # expect noise of translation estimate from translation movement
+odom_alpha4: 0.12 # expect noise of translation estimate from rotation movement
 #odom_alpha5: 0.1
 initial_pose_x: 0
 initial_pose_y: 0

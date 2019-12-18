@@ -21,28 +21,30 @@
 
   <xacro:property name="wood_joint_x" value="0.05" />
   <xacro:property name="wood_joint_y" value="0.0" />
-  <xacro:property name="wood_joint_z" value="0.1275" />
+  <xacro:property name="wood_joint_z" value="0.115" />
 
   
   <!-- lidar -->
 
-  <xacro:property name="ydlidar_tilt" value="${M_PI/2 + (-2.5)*(M_PI/180)}" />
-  <xacro:property name="ydlidar_joint_z" value="0.055" />
+  <xacro:property name="ydlidar_tilt" value="${M_PI + (-1.25)*(M_PI/180)}" />
+  <xacro:property name="ydlidar_joint_z" value="0.035" />
+  <xacro:property name="ydlidar_joint_x" value="0.025" />
 
   <!-- kinect base-->
   <xacro:property name="kinect_base1_height" value="0.38" />
   <xacro:property name="kinect_base2_joint_z" value="0.18" />
+  <xacro:property name="kinect_base1_joint_z" value="0.2" />
 
   <xacro:property name="kinect_base1_joint_x" value="-0.14" />
   <xacro:property name="kinect_base1_joint_y" value="0.0" />
-  <xacro:property name="kinect_base1_joint_z" value="0.2" />
+
 
   <xacro:property name="kinect_parent" value="kinect_base2" />
-  <xacro:property name="cam_px" value="0.03" />
+  <xacro:property name="cam_px" value="0.02" />
   <xacro:property name="cam_py" value="0.0" />
-  <xacro:property name="cam_pz" value="0.09" />
+  <xacro:property name="cam_pz" value="0.06" />
   <xacro:property name="cam_or" value="0.0" />
-  <xacro:property name="cam_op" value="0.2" />
+  <xacro:property name="cam_op" value="0.0" />
   <xacro:property name="cam_oy" value="0.0" />
 
 
