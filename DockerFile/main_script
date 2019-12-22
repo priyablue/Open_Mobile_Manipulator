@@ -1,0 +1,88 @@
+#! /bin/bash
+
+echo ' '
+read -p 'Would you like to run main launch? (y/n): ' ansinput
+
+if [ “$ansinput” = “y” ]
+then
+ printf '\n Launching main \n'
+
+ xterm -e roslaunch lynxbot_bringup main.launch &        
+fi
+
+
+
+echo ' '
+
+read -p 'Would you like to run amcl launch? (y/n): ' input_choice
+
+if [ “$input_choice” = “y” ]
+then
+ xterm -e roslaunch lynxbot_bringup amcl.launch &
+
+fi
+
+
+
+echo ' '
+
+read -p 'Would you like to run kinect camera (y/n): ' input_choice1
+
+if [ “$input_choice1” = “y” ]
+then
+  sudo xterm -e docker run --net=host --privileged kinectimage:1.0 &
+
+fi
+
+
+
+read -p 'Would you like to run rtabmap mapping launch? !!!!CAREFULL delede db (y/n): ' input_choice1
+
+if [ “$input_choice1” = “y” ]
+then
+ xterm -e roslaunch lynxbot_bringup mapping.launch &
+
+fi
+
+
+
+echo ' '
+
+read -p 'Would you like to run rtabmap localization launch? (y/n): ' input_choice2
+
+if [ “$input_choice2” = “y” ]
+then
+ xterm -e roslaunch lynxbot_bringup localization.launch &
+
+fi
+
+
+
+echo ' '
+
+read -p 'Would you like to run move_base launch? (y/n): ' input_choice3
+
+if [ “$input_choice3” = “y” ]
+then
+ xterm -e roslaunch lynxbot_bringup move_base.launch &
+
+fi
+
+
+
+echo ' '
+
+read -p 'Would you like to run teleop launch? (y/n): ' input_choice4
+
+if [ “$input_choice4” = “y” ]
+then
+ xterm -e roslaunch lynxbot_bringup teleop.launch &
+
+fi
+
+
+
+
+echo ' '
+echo 'Script Completed'
+echo ' '

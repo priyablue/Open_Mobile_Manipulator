@@ -31,6 +31,7 @@
        <param name="Reg/Force3DoF" type="string" value="true"/>
 
        <param name="RGBD/NeighborLinkRefining" type="string" value="true"/>
+       <param name="RGBD/ProximityPathMaxNeighbors" type="string" value="0"/>
        <param name="RGBD/ProximityBySpace" type="string" value="true"/>
        <param name="RGBD/AngularUpdate" type="string" value="0.1"/>
        <param name="RGBD/LinearUpdate" type="string" value="0.1"/>

@@ -1,0 +1,7 @@
+#! /bin/bash
+ 
+xterm -e rosrun topic_tools relay camera/rgb/image_raw my_camera/rgb/image_raw &   
+
+#xterm -e rosrun topic_tools relay camera/depth_registered/camera_info my_camera/depth_registered/camera_info &
+xterm -e rosrun topic_tools relay camera/depth_registered/points my_camera/depth_registered/points &
+

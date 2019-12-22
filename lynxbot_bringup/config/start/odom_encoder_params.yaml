@@ -1,4 +1,3 @@
-base_width: 0.35
-ticks_meter: 63694
-publish_tf: 1
-odom_frame_id: odom  #_encoder
+base_width: 0.39
+ticks_meter: 53694
+
